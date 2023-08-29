@@ -1,0 +1,22 @@
+body {
+    background-color:#333;
+    color: #ccc;
+}
+
+#my-gallery img {
+    padding-top: 64px;
+}
+.pswp__zoom-level-indicator {
+    font-size: 16px;
+    line-height: 1;
+    font-weight: bold;
+    height: auto;
+    align-self: center;
+    padding: 4px 6px 5px;
+    margin-right: 4px;
+}
+button.pswp__button--test-button {
+    background: #136912 !important;
+    font-size: 20px;
+    color: #fff;
+}

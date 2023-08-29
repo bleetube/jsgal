@@ -1,0 +1,43 @@
+<!-- views/gallery.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gallery</title>
+    <script type="module" src="dist/main.js"></script>
+  </head>
+  <body>
+    <div class="pswp-gallery" id="my-gallery">
+
+    <% for(let image of images) { %>
+      <% if(image.path.endsWith('.mp4')) { %>
+        <a 
+          href="<%= image.path %>" 
+          data-pswp-width="<%= image.width %>"
+          data-pswp-height="<%= image.height %>"
+          target="_blank">
+        <video
+          class="lazy"
+          autoplay loop muted playsinline
+          width="<%= image.previewWidth %>"
+          height="<%= image.previewHeight %>"
+          <source type="video/mp4" data-src="<%= image.path %>">
+        ></video></a>
+      <% } else { %>
+        <a
+          href="<%= image.path %>"
+          data-pswp-width="<%= image.width %>"
+          data-pswp-height="<%= image.height %>"
+          target="_blank">
+          <img
+            src="<%= image.path %>"
+            loading="lazy"
+            width="<%= image.previewWidth %>"
+            height="<%= image.previewHeight %>"
+            alt=""
+          />
+        </a>
+      <% } %>
+    <% } %>
+    </div>
+  </body>
+</html>
