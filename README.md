@@ -1,11 +1,6 @@
 # tsgal
 
-Basic image gallery written in Typescript.
-
-Stack:
-
-* [PhotoSwipe](https://photoswipe.com/) - lightbox
-* [yall](https://github.com/malchata/yall.js) - lazy loading videos
+Quick and dirty image gallery using Photoswipe, yall, sharp, and ejs.
 
 ## usage
 
